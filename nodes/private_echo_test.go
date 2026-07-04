@@ -4,12 +4,11 @@ import (
 	"context"
 	"testing"
 
-	"pkgent001owner/entitlement-fixture/axiom"
 	gen "pkgent001owner/entitlement-fixture/gen"
 )
 
 func TestPrivateEcho(t *testing.T) {
-	out, err := PrivateEcho(context.Background(), axiom.Context{}, &gen.EntFixtureMessage{Text: "hello"})
+	out, err := PrivateEcho(context.Background(), nil, &gen.EntFixtureMessage{Text: "hello"})
 	if err != nil {
 		t.Fatalf("unexpected error: %v", err)
 	}
