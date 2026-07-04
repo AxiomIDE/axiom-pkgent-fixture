@@ -1,0 +1,12 @@
+// PKG-ENT-001 e2e fixture (ENT-E2E-CROSSTENANT-UX): minimal self-contained
+// message for the entitlement-fixture package. No imports — this package
+// must not depend on any other tenant's private packages.
+syntax = "proto3";
+
+package pkgent001owner.entitlement_fixture;
+
+option go_package = ".;gen";
+
+message EntFixtureMessage {
+  string text = 1;
+}

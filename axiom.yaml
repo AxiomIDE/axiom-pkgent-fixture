@@ -1,0 +1,10 @@
+name: pkgent001owner/entitlement-fixture
+version: 0.1.0
+language: go
+description: "PKG-ENT-001 e2e fixture: a single private passthrough node owned by a fixed, dedicated test tenant. Exists solely to exercise the package-entitlement grant/revoke/compile-gate/list-visibility mechanism end-to-end against the live registry (frontend/e2e-gate/coverage — ENT-E2E-CROSSTENANT-UX)."
+
+nodes:
+  - name: PrivateEcho
+    description: "Echoes the input text back unchanged. Trivial passthrough — the node's behavior is irrelevant; only its private ownership matters for the entitlement test."
+    input: EntFixtureMessage
+    output: EntFixtureMessage
